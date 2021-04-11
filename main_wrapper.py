@@ -1,8 +1,8 @@
 from main import parse_args
 
 what = 'train'
-dataset_path = 'G:/VOC - dataset/'
-out_path = 'G:/VOC - dataset/gain-result'
+dataset_path = '/content/gdrive/MyDrive/VOC-dataset'
+out_path = '/content/gdrive/MyDrive/VOC-dataset/gain-result'
 model_type = 'vgg16'
 gradient_layer_name = 'features'
 input_dims = '224'
