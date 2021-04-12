@@ -7,7 +7,7 @@ model_type = 'vgg16'
 gradient_layer_name = 'features'
 input_dims = '224'
 input_channels = '3'
-gpus = '1'
+gpus = '0' #That is is not the amount, it is the device num
 
 argv = [
     '{}'.format(what),
