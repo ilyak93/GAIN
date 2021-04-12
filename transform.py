@@ -22,7 +22,7 @@ class TransformerBase:
             aug_ = self.augmenter.to_deterministic()
             image = aug_.augment_images([image])
             image = [im.astype(np.float32)/255.0 for im in image]
-            truth = [ia.SegmentationMapOnImage(label[i],
+            truth = [ia.SegmentationMapOnImage((label[i].astype(np.int32)),
                                                shape=image[0].shape,
                                                nb_classes=2)
                      for i in range(len(label))]
