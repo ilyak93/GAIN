@@ -7,6 +7,7 @@ model_type = 'vgg16'
 gradient_layer_name = 'features'
 input_dims = '224'
 input_channels = '3'
+gpus = 1
 
 argv = [
     '{}'.format(what),
@@ -29,7 +30,10 @@ argv = [
     '--output-dir',
     out_path,
     '--input-channels',
-    input_channels]
+    input_channels,
+	'--gpus',
+	gpus
+]
 
 args = parse_args(argv)
 args.func(args)
