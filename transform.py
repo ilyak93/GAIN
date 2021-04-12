@@ -33,7 +33,7 @@ class TransformerBase:
 
             if('label/masks' in data_dict.keys()):
                 masks = data_dict['label/masks']
-                masks = [ia.SegmentationMapOnImage(masks[i],
+                masks = [ia.SegmentationMapOnImage(masks[i].astype(np.int32),
                                                    shape=image[0].shape,
                                                    nb_classes=2)
                         for i in range(len(masks))]
