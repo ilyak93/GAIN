@@ -485,10 +485,8 @@ class AttentionGAIN:
 
         for label in labels:
 
-            #grad_target = (output_cl * label).sum()
-            grad_target = (output_cl * label)
+            grad_target = (output_cl * label).sum()
             grad_target.backward(gradient=label * output_cl, retain_graph=True)
-            #grad_target.backward(retain_graph=True)
 
             # Eq 1
             w_c = F.avg_pool2d(
